@@ -1,0 +1,21 @@
+
+
+<div class="login-container">
+  <div class="login-row">
+    <md-input-container>
+      <input type="text" mdInput [(ngModel)]="email"  placeholder="Email address" name="email"required>
+      <md-error>Email address is required</md-error>
+    </md-input-container>
+  </div>
+  <div class="login-row">
+    <md-input-container>
+      <input type="text" mdInput [(ngModel)]="password"  placeholder="password" name="password"required>
+      <md-error>Password is required</md-error>
+    </md-input-container>
+  </div>
+  <div class="login-row">
+    <button md-raised-button (click)="login()">LOGIN</button>
+    <button md-raised-button (click)='cancel()'>CANCEL </button>
+  </div>
+</div>
+

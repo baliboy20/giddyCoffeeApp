@@ -1,0 +1,27 @@
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: silver;
+}
+
+.title-container {
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.title-container {
+  //border: 1px solid brown;
+}
+.expandable-button-container {
+  display: inline-block;
+  //background-color: greenyellow;
+}
+
+.expandable-title-content-container {
+  display: flex;
+  flex: 1 1 80%;
+  //flex-flow: row nowrap;
+  //background-color: black;
+}

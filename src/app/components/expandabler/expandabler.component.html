@@ -1,0 +1,18 @@
+<div class="title-container">
+  <div class="expandable-title-content-container">
+    <ng-content select="wgp-expandabler-title"></ng-content>
+  </div>
+  <div class="expandable-button-container">
+    <button type="button"(click)="_clicked()" >
+      <span class="material-iconsS">{{buttonText}}</span>
+      <!--<span class="material-icons">{{ bnCollapse ? 'keyboard_arrow_down':'keyboard_arrow_up'}}</span>-->
+    </button>
+  </div>
+
+</div>
+
+<br>
+<ng-content *ngIf="isExpanded"
+            [@enterAnimation]
+            select="wgp-expandabler-body"></ng-content>
+<br>

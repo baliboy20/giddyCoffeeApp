@@ -1,0 +1,12 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  .row {
+   flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    //background-color: purple;
+ }
+}
+

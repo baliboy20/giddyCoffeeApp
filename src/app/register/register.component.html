@@ -1,0 +1,56 @@
+
+
+
+<div class="register-container">
+  <div class="row"></div>
+  <div class="row">
+   <md-input-container>
+     <input type="text" mdInput [(ngModel)]="register.fname" required name="fname" placeholder="First name">
+   </md-input-container>
+  </div>
+
+  <div class="row">
+    <md-input-container>
+      <input type="text" mdInput [(ngModel)]="register.lname" required name="lname" placeholder="Last name">
+    </md-input-container>
+  </div>
+
+  <div class="row">
+    <md-input-container>
+      <input type="text" mdInput [(ngModel)]="register.email" required name="lname" placeholder="email">
+    </md-input-container>
+  </div>
+
+  <div class="row">
+    <md-input-container>
+      <input type="text" mdInput [(ngModel)]="register.telephone" required name="telephone" placeholder="telephone">
+    </md-input-container>
+  </div>
+
+  <div class="row">
+    <md-input-container>
+      <input type="text" mdInput [(ngModel)]="register.companyName" required name="companyName" placeholder="Company name">
+    </md-input-container>
+  </div>
+
+
+  <!--<div class="row">-->
+    <!--<md-input-container>-->
+      <!--<input type="text" mdInput [(ngModel)]="register.lname" required name="lname" placeholder="First name">-->
+    <!--</md-input-container>-->
+  <!--</div>-->
+
+
+  <!--<div class="row">-->
+    <!--<md-input-container>-->
+      <!--<input type="text" mdInput [(ngModel)]="register.lname" required name="lname" placeholder="First name">-->
+    <!--</md-input-container>-->
+  <!--</div>-->
+
+
+<div class="row">
+  <button md-raised-button (click)="onClicked('cancel')" color="accent">CANCEL</button>
+  <button md-raised-button (click)="onClicked('ok')" color="primary">OK</button>
+</div>
+
+</div>

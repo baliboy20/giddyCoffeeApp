@@ -1,0 +1,91 @@
+.order-container {
+  display: flex;
+  flex-flow: row wrap;
+  flex: auto;
+
+  //background-color: blueviolet;
+  justify-content: center;
+}
+
+.order-row {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  //background-color: blue;
+  //;
+  & .mat-card {
+ width: 550px;
+
+  }
+}
+
+.order-header {
+  background-color: snow;
+}
+
+wgp-expandabler-title {
+  display: flex;
+  flex: 1 1 80%;
+  //flex-flow: row nowrap;
+
+}
+
+
+.price, .name {
+  flex: 1 1 90%;
+  //max-width: 30px;
+  //width:30px;
+  //display: inline-flex;
+}
+
+.spacer {
+  flex: 0 0 auto;
+}
+
+
+.div {
+  display: flex;
+  padding: 10px 0px;
+justify-content: space-around;
+  //border: solid cornflowerblue 1px;
+  md-input-container {
+    margin-left: 10px;
+    width: 30px;
+
+  }
+}
+
+md-card-title {
+  display: flex;
+  justify-content: flex-start;
+
+  button {
+    color: silver;
+    margin-left: auto;
+
+  }
+}
+
+.panelStyle {
+  background-color: gainsboro;
+  color: purple;
+}
+
+.mat-select-content{
+  background-color: white;
+}
+
+.order-title {
+  padding: 20px;
+}
+@media screen and (max-width: 667px) {
+  md-input-container, md-select{
+    //font-size: 8px;
+    //color: yellow;
+  }
+.sm-screen {
+  display: none;
+}
+
+
+}

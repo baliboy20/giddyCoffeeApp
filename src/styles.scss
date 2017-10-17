@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import url("http://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+
+//@import '~@angular/material/theming';
+//@include mat-core();
+//
+//$my-app-primary: mat-palette($mat-blue-grey);
+//@debug "the value of $my-app-primary is:- ";
+//@debug $my-app-primary;˚
+//$my-app-primary : rgb(255,0,0);
+//hlh
+
+h3, h1, h2,h4,h5,h6 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+h1 { font-weight: 300;}
+h6 { font-weight: 500;}
+h2, h3, h4, h5 { font-weight: 400;}
+
+
+//$primary: mat-palette($mat-indigo);
+//$accent: mat-palette($mat-indigo, A100);
+//
+//@mixin nav-theme($theme) {
+//  // Extract whichever individual palettes you need from the theme.
+//
+//  $accent: map-get($theme, accent);
+//
+//  // Use mat-color to extract individual colors from a palette as necessary.
+//  nav {
+//    background-color: $my-app-primary;
+//  }
+//}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!--<div>-->
+  <!--<mat-input-container>-->
+    <!--<input type="text" matInput placeholder="Enter postcode" [matAutocomplete]="autocomp1">-->
+  <!--</mat-input-container>-->
+  <!--<mat-autocomplete #autocomp1>-->
+    <!--<mat-option [value]="'Cornhill'">Cornhill</mat-option>-->
+    <!--<mat-option [value]="'Cheapside'">Cheapside</mat-option>-->
+  <!--</mat-autocomplete>-->
+<!--</div>-->
+
+
+<!--<div class="longdiv">-->
+
+  <div class="menu-container">
+    <div class="menu-row">
+      <mat-card>
+        <mat-card-title>
+          Menu
+          <button mat-icon-button (click)="navigateTo('order')" matTooltip="Take order">
+            <mat-icon>label_outline</mat-icon>
+          </button>
+        </mat-card-title>
+        <mat-card-content>
+
+        </mat-card-content>
+
+          <div *ngFor="let i of menu" class="menu-mat-card-row">
+            <div class="menu-mat-card-row-item-25">{{i.name}}</div>
+            <div class="menu-mat-card-row-item-10">
+              <hr style="border:none; border-bottom: dotted gainsboro 1px">
+            </div>
+
+            <div class="menu-mat-card-row-item-25">{{i.price|currency:'gbp':2.2-2}}</div>
+          </div>
+
+
+        <mat-card-actions color="primary">
+          <button mat-raised-button color="accent" (click)="orderDrinks()">ORDER</button>
+        </mat-card-actions>
+      </mat-card>
+
+
+    </div>
+  </div>
+<!--</div>-->
+
+<!--<h2>hello menu</h2>-->

@@ -1,0 +1,66 @@
+<div class="toolbar-container">
+  <mat-toolbar color="primary">
+    <span class="title">Giddy Up Coffee</span>
+
+    <div class="spacer"></div>
+    <button class="mat-toolbar-bn" mat-icon-button matTooltip="Your Order">
+      <mat-icon>shopping_cart</mat-icon>
+      <span style="font-size: small;">{{totalOrder|async|currency:'gbp':2.2-2}}</span>
+    </button>
+    <div>
+      <button mat-icon-button matTooltip="Login / register" [matMenuTriggerFor]="loginMenu">
+        <mat-icon>person</mat-icon>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+    </div>
+
+
+    <!--<button mat-icon-button matTooltip="Home" (click)="navigateTo('menu')" >-->
+    <!--<mat-icon color="accent">home</mat-icon>-->
+    <!--</button>-->
+
+    <mat-menu #loginMenu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        Sign-in
+      </button>
+      <button mat-menu-item>
+        <mat-icon>directions_walk</mat-icon>
+        Sign-out
+      </button>
+      <span>
+      <button mat-menu-item (click)="clickRegister()">
+          <mat-icon>person_add</mat-icon>
+          Register
+        </button>
+    </span>
+    </mat-menu>
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item> Settings</button>
+      <button mat-menu-item> Help</button>
+    </mat-menu>
+
+
+  </mat-toolbar>
+</div>
+<!--<mat-toolbar color="accent">-->
+
+<!--</mat-toolbar>-->
+
+<!--<div class="banner">-->
+<!--&lt;!&ndash;<p>ORDER FRESH ARTISANAL COFFEE </p>&ndash;&gt;-->
+
+<!--<h3 style="color:darkred">TO YOUR DESK</h3>-->
+
+
+<!--</div>-->
+<br><br> <br><br><br>
+<br>
+
+<router-outlet></router-outlet>
+
+
+

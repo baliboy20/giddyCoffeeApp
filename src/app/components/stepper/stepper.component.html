@@ -1,0 +1,5 @@
+<div class="stepper-container">
+  <button md-button-raised (click)="step(1)"><span class="material-icons">add</span></button>
+  <input type="text" mdInput min="0" [(ngModel)]="amount">
+  <button  md-button-raised (click)="step(-1)"><span class="material-icons">remove</span></button>
+</div>

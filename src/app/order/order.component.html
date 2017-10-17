@@ -1,0 +1,119 @@
+<div class="order-container">
+  <div class="order-row">
+    <mat-card class="mat-card">
+
+      <mat-card-title class="order-title">
+        <button md-icon-button mdTooltip="Your Order">
+          <span
+            style="font-size: small;
+            color:silver">
+            {{totalOrder|async|currency:'gbp':2.2-2}}</span>
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+
+      </mat-card-title>
+      <!--Main menu
+      [buttonText]="'ADD'"
+                       [isExpanded]="item.selectedOptions.length"
+                       (onClicked)="addItem(item)"
+      -->
+      <div *ngFor="let item of menu"
+      >
+
+        <!--wgp-expandabler-title-->
+        <div style="
+        display: flex;
+        flex: 1 1 auto;
+        min-width: 20%;
+        justify-content: space-around;
+        background-color: transparent;
+        align-items: center;
+        ">
+
+          <div style="padding: 0 2.5%">{{item.name}}</div>
+          <hr style="
+            border: none;
+            border-top: 1px dotted gainsboro;
+            flex: 1 1 40px">
+          <div style="padding: 0 3.5%">{{item.price|currency:'gbp':2.2-2}}</div>
+
+          <button mat-mini-fab style="margin: 0 10%" (click)="addItem(item)">
+            <mat-icon>add</mat-icon>
+          </button>
+
+
+        </div>
+
+        <hr style="border: none;
+	          border-bottom: 1px solid silver;
+            height: 2vh;
+            visibility: hidden;
+          ">
+        <!--body-->
+        <div *ngIf="item.selectedOptions.length">
+
+          <div class="div"
+               *ngFor="let selOp of item .selectedOptions; let selOptIdx = index">
+            <mat-form-field>
+            <mat-select
+              color="accent"
+              #choices="matSelect"
+              floatPlaceholder="never"
+              required="true"
+              [ngModel]="selOp"
+              [panelClass]="'panelStyle'"
+              placeholder="Choose"
+              (change)="onChanged(choices.selected.value, selOp)">
+              <mat-select-trigger>{{choices.selected?.viewValue}}</mat-select-trigger>
+              <mat-option
+                *ngFor="let j of item.options"
+                [value]="j">
+                {{j.sundryName}}
+              </mat-option>
+            </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input type="number"
+                     placeholder="qty"
+                     (input)="onQtyChanged($event.target.value, selOp)"
+                     matInput [ngModel]="selOp.qty"
+                     min="0"
+                     max="10">
+            </mat-form-field>
+            {{idx}}
+            <button  (click)="delete(selOptIdx, item)"
+                     style="background-color: transparent;
+                   border:none">
+                <span class="material-icons"
+                      style="white-space: pre;
+                      color: silver;
+                      font-size: 1.1rem">
+                  close</span>
+            </button>
+
+          </div>
+          <hr style="border: none;
+	          border-bottom: 1px solid silver;
+            height: 2vh;
+            visibility: hidden;
+          ">
+
+        </div>
+
+      </div>
+
+      <mat-card-actions>
+        <div style="display: flex; justify-content: flex-end">
+          <button mat-fab
+                  mat-tooltip="Continue purchase"
+                  color="accent">
+            <span class="material-icons">keyboard_arrow_right</span>
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
+
